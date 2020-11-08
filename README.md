@@ -27,7 +27,7 @@ If you'd like to use this plugin, here are the steps to follow:
 					</execution>
 				</executions>
 				<configuration>
-					<exludeGroupId>com.example</exludeGroupId>
+					<excludeGroupId>com.example</excludeGroupId>
 				</configuration>
 			</plugin>
 		</plugins>
@@ -64,7 +64,7 @@ Both goals are bound to the compile phase by default, however, it's possible to 
 					</execution>
 				</executions>
 				<configuration>
-					<exludeGroupId>fr.mbh</exludeGroupId>
+					<excludeGroupId>fr.mbh</excludeGroupId>
 				</configuration>
 			</plugin>
 		</plugins>
