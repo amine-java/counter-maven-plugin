@@ -37,7 +37,7 @@ The excludeGroupId is optional and can be ignored, this is used by the plugin to
   
 3- Launch mvn compile and you should get messages regarding the number of dependencies within your project as well as the number of active profiles.
 
-Both goals are bind to the compile phase by default, however, it's possible to change that by defining a phase in the execution element in the pom.xml. We can also bind one goal to a phase and the other to another one, here's an example: 
+Both goals are bound to the compile phase by default, however, it's possible to change that by defining a phase in the execution element present in the pom.xml. We can also bind one goal to a phase and the other to another one, here's an example: 
 
 
 
