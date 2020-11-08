@@ -33,6 +33,6 @@ If you'd like to use this plugin, here are the steps to follow:
 		</plugins>
 	</build>
   
-The excludeGroupId is optional and can be ignored, this is used by the pluggin to ignore a specific group id in the counting dependencies process. 
+The excludeGroupId is optional and can be ignored, this is used by the plugin to ignore a specific group-id in the counting-dependencies process. 
   
 3- Launch mvn compile and you should get messages regarding the number of dependencies within your project as well as the number of active profiles.
