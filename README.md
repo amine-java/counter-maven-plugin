@@ -2,8 +2,7 @@
 
 This plugin consists of 2 goals: 
 
-> counter-profiles goal that will display the number of active profiles within your project. 
-> counter-dependencies goal that will display the number of dependencies within your project.
+> counter-profiles goal that will display the number of active profiles within your project and counter-dependencies goal that will display the number of dependencies within your project.
 
 If you'd like to use this plugin, here are the steps to follow: 
 
