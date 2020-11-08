@@ -24,7 +24,7 @@ public class CounterDependenciesMojo extends AbstractMojo {
 	
 	/** Group id to be excluded from counting **/
 	@Parameter(property = "excluding")
-	private String exludeGroupId; 
+	private String excludeGroupId; 
 	
 	/**
 	 * Execute Mojo
@@ -32,12 +32,12 @@ public class CounterDependenciesMojo extends AbstractMojo {
 	@Override
 	public void execute() throws MojoExecutionException, MojoFailureException {
 		int size = 0 ;
-		getLog().info("exludeGroupId is equal to: " + exludeGroupId);
-		if (exludeGroupId != null && exludeGroupId.length() != 0 ) {
-			getLog().info("Using a filter to exclude all dependencies with groupId starting by: " + exludeGroupId);
+		getLog().info("exludeGroupId is equal to: " + excludeGroupId);
+		if (excludeGroupId != null && excludeGroupId.length() != 0 ) {
+			getLog().info("Using a filter to exclude all dependencies with groupId starting by: " + excludeGroupId);
 			for (Object object : project.getDependencies()) {
 					Dependency dependency = (Dependency) object;
-					if (!dependency.getGroupId().startsWith(exludeGroupId)) {
+					if (!dependency.getGroupId().startsWith(excludeGroupId)) {
 						size++;
 					}
 			}
