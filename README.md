@@ -36,3 +36,36 @@ If you'd like to use this plugin, here are the steps to follow:
 The excludeGroupId is optional and can be ignored, this is used by the plugin to ignore a specific group-id in the counting-dependencies process. 
   
 3- Launch mvn compile and you should get messages regarding the number of dependencies within your project as well as the number of active profiles.
+
+Both goals are bind to the compile phase by default, however, it's possible to change that by defining a phase in the execution element in the pom.xml. We can also bind one goal to a phase and the other to another one, here's an example: 
+
+
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>com.mbh.plugin</groupId>
+				<artifactId>counter-maven-plugin</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
+				<executions>
+					<execution>
+						<id>execution-counter-profiles</id>
+						<phase>test</phase>
+						<goals>
+							<goal>counter-profiles</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>execution-counter-dependencies</id>
+						<phase>compile</phase>
+						<goals>
+							<goal>counter-dependencies</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<exludeGroupId>fr.mbh</exludeGroupId>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
